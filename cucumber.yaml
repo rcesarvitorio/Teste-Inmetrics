@@ -1,0 +1,6 @@
+---
+default: -p firefox
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+
+config: ENV_TYPE=config
