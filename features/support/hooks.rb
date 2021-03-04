@@ -1,7 +1,11 @@
 require 'faker'
 
-Before do
+Before do 
+    @alertas_view = Alertas.new 
     @cadastro_page = CadastroPage.new
-@login = Fa
+    @funcionario_page = FuncionarioPage.new
+    @login_page = LoginPage.new
+    
+    gerar_dados
 
 end

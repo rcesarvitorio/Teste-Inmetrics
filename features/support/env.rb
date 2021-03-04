@@ -4,6 +4,9 @@ require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'rspec'
 require 'httparty'
+require_relative 'helpers'
+World(Dados)
+
 
 
 case ENV["BROWSER"]
