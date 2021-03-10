@@ -15,7 +15,7 @@ Quando('preencher {string}, {string} e {string}') do |login, senha, confirmarsen
 end
   
 Então('receberá o alerta.') do
-expect(@alertas_view.alerta_campo_obrigatorio).to be_truthy
+expect(@alerta_view.alerta_campo_obrigatorio).to be_truthy
 end
   
 Quando('esse login já está cadastrado.') do
@@ -24,5 +24,5 @@ Quando('esse login já está cadastrado.') do
 end
   
 Então('retorna a mensagem {string}') do |mensagem|
-  expect(@cadastro_page.alerta_de_erro(mensagem)).to eql mensagem
+  expect(@alerta_view.alerta_de_erro(mensagem)).to eql mensagem
 end

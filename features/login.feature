@@ -19,10 +19,10 @@ Funcionalidade: Login
         Quando colocar <login> e <senha>.
         Então verá a mensagem <mensagem>
 
-    Exemplos:
-        |    login      |  senha   |          mensagem                |
-        |"testeteste"   | "112233" |"ERRO! Usuário ou Senha inválidos"|
-        |"teste99887766"|"11223344"|"ERRO! Usuário ou Senha inválidos"|
+    Exemplos: 
+        |    login      |  senha   |          mensagem                   |
+        |"testeteste"   | "112233" |"ERRO! Usuário ou Senha inválidos\n×"|
+        |"teste99887766"|"11223344"|"ERRO! Usuário ou Senha inválidos\n×"|
 
     @login_em_branco
     Esquema do Cenário: Login sem sucesso

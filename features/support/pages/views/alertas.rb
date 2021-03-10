@@ -8,4 +8,8 @@ class Alertas
     def alerta_de_erro(mensagem)       
         find('.text-center', text: mensagem).text
      end
+
+    def alerta(mensagem)
+        find('.alert-dismissible', text: mensagem).text
+    end
 end

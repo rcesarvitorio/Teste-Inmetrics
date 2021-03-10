@@ -7,13 +7,13 @@ Dado('que o usuário esteja na tela de login.') do
   end
   
   Então('o usuário estará logado e irá para página de funcionários.') do
-    expect(@funcionario_page.usuario_logado).to be_truthy
+  expect(@funcionario_page.usuario_logado).to be_truthy
   end
   
   Então('verá a mensagem {string}') do |mensagem|
-  expect(@alertas.alerta_de_erro(mensagem)).to eql mensagem
+  expect(@alerta_view.alerta(mensagem)).to eql mensagem
   end
   
   Então('verá o alerta de campo obrigatório') do
-  expect(alerta.alerta_campo_obrigatorio).to be_truthy
+  expect(@alerta_view.alerta_campo_obrigatorio).to be_truthy
   end

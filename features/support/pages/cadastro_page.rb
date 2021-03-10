@@ -14,9 +14,7 @@ class CadastroPage
         sleep 1
     end
  
-    def alerta_de_erro(mensagem)       
-        find('.text-center', text: mensagem).text
-    end
+
 
     def tela_login
         find('.login100-form-title').text        
