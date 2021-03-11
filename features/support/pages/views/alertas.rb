@@ -10,6 +10,7 @@ class Alertas
      end
 
     def alerta(mensagem)
+        binding.pry
         find('.alert-dismissible', text: mensagem).text
     end
 end

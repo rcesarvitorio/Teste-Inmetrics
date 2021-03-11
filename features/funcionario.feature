@@ -9,7 +9,7 @@ Contexto:
     Cenário: Cadastrar funcionário
         
         Quando cadastrar um funcionário
-        Então verá a mensagem "SUCESSO! Usuário cadastrado com sucesso".
+        Então verá a mensagem 'SUCESSO! Usuário cadastrado com sucesso'.
 
     @editar_func
     Cenário: Editar funcionário

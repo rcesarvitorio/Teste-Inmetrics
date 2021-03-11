@@ -8,7 +8,7 @@ Dado('que o usuário esteja logado') do
   end
   
   Então('verá a mensagem {string}.') do |mensagem|
-  expect(alerta_view.alerta).to eql mensagem
+  expect(@alerta_view.alerta(mensagem)).to eql mensagem
   end
   
   Quando('editar um funcionário') do

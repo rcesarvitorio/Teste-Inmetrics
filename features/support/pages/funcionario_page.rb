@@ -11,16 +11,15 @@ class FuncionarioPage
 
     def adicionar_funcionario        
         find('.nav-link', text: 'NOVO FUNCIONÁRIO').click
-        find('#inputNome').set @nome 
-        find('#inputCargo').set @job        
-        find('#cpf').set @cpf
-        binding.pry            
-        find('#dinheiro').set @salario
-        drop = find('#slctSexo')
-        drop.all('option').sample.select_option
-        ctt = @contrato.sample
+        find('#inputNome').set $nome 
+        find('#inputCargo').set $job        
+        find('#cpf').set $cpf                  
+        find('#dinheiro').set $salario
+        list = find('#slctSexo').all('option')        
+        list.drop(1).sample.select_option        
+        ctt = $contrato.sample
         choose(ctt)
-        find('#inputAdmissao').set @admdata               
-        find('.cadastrar-form-btn').click
+        find('#inputAdmissao').set $admdata               
+        find('.cadastrar-form-btn').click        
     end
 end
