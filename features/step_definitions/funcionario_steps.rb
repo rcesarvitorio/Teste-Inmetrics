@@ -8,13 +8,13 @@ Dado('que o usuário esteja logado') do
   end
   
   Então('verá a mensagem {string}.') do |mensagem|
-  expect(@alerta_view.alerta(mensagem)).to eql mensagem
+  expect(@alerta_view.alerta(mensagem)).to include mensagem
   end
   
   Quando('editar um funcionário') do
-    pending # Write code here that turns the phrase above into concrete actions
+  @funcionario_page.editar_funcionario
   end
   
   Quando('deletar um funcionário') do
-    pending # Write code here that turns the phrase above into concrete actions
+  @funcionario_page.deletar_funcionario
   end

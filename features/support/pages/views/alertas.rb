@@ -1,3 +1,5 @@
+require 'pry'
+
 class Alertas
     include Capybara::DSL
     def alerta_campo_obrigatorio
@@ -9,8 +11,9 @@ class Alertas
         find('.text-center', text: mensagem).text
      end
 
-    def alerta(mensagem)
+    def alerta(mensagem)      
         binding.pry
         find('.alert-dismissible', text: mensagem).text
+        
     end
 end

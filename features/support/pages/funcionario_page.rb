@@ -1,4 +1,5 @@
-
+require 'faker'
+require 'pry'
 
 
 class FuncionarioPage
@@ -20,6 +21,24 @@ class FuncionarioPage
         ctt = $contrato.sample
         choose(ctt)
         find('#inputAdmissao').set $admdata               
-        find('.cadastrar-form-btn').click        
+        find('.cadastrar-form-btn').click    
+           
+    end
+
+    def editar_funcionario 
+        adicionar_funcionario        
+        find('input[type=search').set $cpf
+        find('.btn-warning', match: :first).click
+        job = Faker::Job.title
+        salario = Faker::Number.number(digits: 6)
+        find('#inputCargo').set job
+        find('#dinheiro').set salario        
+        find('.cadastrar-form-btn').click
+    end
+
+    def deletar_funcionario
+        adicionar_funcionario
+        find('input[type=search').set $cpf
+        find('.fa-trash').click
     end
 end

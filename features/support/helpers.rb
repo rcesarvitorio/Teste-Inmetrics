@@ -6,11 +6,11 @@ module Dados
         $login = Faker::Internet.username(specifier: 8)
         $senha = Faker::Internet.password
         $confirmarsenha = $senha
-        $nome = Faker::Internet.username
-        $job = Faker::Job.title
+        $nome = Faker::Name.first_name
+        $job = 'Analista de Testes'        
         $cpf = Faker::CPF.pretty
         $contrato = ['CLT', 'PJ']
-        $salario = Faker::Number.number(digits: 4)
-        $admdata = "27022021"    
+        $salario = Faker::Number.number(digits: 6)
+        $admdata = "27/02/2021"    
     end
 end
